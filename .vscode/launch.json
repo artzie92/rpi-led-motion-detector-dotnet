@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "preLaunchTask": "deploy",
+            "name": ".NET Core Launch (remote)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "/home/pi/.dotnet/dotnet",
+            "args": [
+                "/home/pi/MyRPIApp/MyRPIApp.dll"
+            ],
+            "cwd": "/home/pi/MyRPIApp",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceFolder}",
+                "pipeProgram": "ssh",
+                "pipeArgs": [
+                    "pi@192.168.1.102"
+                ],
+                "debuggerPath": "/home/pi/vsdbg/vsdbg"
+            }
+        }
+    ]
+}
